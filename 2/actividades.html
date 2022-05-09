@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Se define la codificación de caracteres -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Se define el título de la página-->
+    <title>El mundo de Avatar</title>
+    <!-- llama el archivo estilos.css -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Se define el icono de la página -->
+    <link rel="icon" href="img/icon.svg">
+</head>
+
+<body>
+    <!-- Se crea la barra de navegación-->
+    <nav>
+        <!-- Definir el logo de la barra de navegación -->
+        <div class="container-logo">
+            <a href="index.html">
+                <!-- Añadir el logo de la barra de navegación-->
+                <img src="img/avatar_logo_black.png" alt="Avatar logo" class="logo">
+            </a>
+        </div>
+        <!-- Crear el selector para el menu responsive-->
+        <input type="checkbox" id="btn-menu">
+        <!-- Crear el label para el botón de expandir el menu-->
+        <label for="btn-menu">
+            <div class="button_menu not-selectable">
+                <!--Seleccionar entre dos imagenes a mostrar en el botón-->
+                <img src="img/icons8-menu-100.svg" alt="menu logo" class="menu" />
+                <img src="img/icons8-x-100.png" alt="cancel logo" class="exit" />
+            </div>
+        </label>
+        <!-- Crear un contenedor para los botones-->
+        <div class="buttons">
+            <!-- Definir cada botón-->
+            <a href="index.html">Inicio</a>
+            <a href="ubicacion.html">Ubicación</a>
+            <a href="personajes.html">Personajes</a>
+            <!--Definir el botón de la página actual-->
+            <a class="active" href="actividades.html">Actividades</a>
+            <a href="historia.html">Historia</a>
+            <a href="creditos.html">Créditos</a>
+        </div>
+    </nav>
+    <!--Título para la selección de personajes-->
+    <p class="title_center" id="personajes_section">Seleccione el elemento del maestro:</p>
+    <!-- Crear unas cartas con acceso a distintos temas de la página, en este caso con el elemento del maestro-->
+    <div class="maestros">
+        <!-- Crear cada carta-->
+        <!--Crear la carta que redirige a una sección-->
+        <a href="#maestro_agua" class="maestro">
+            <!-- añadir la imagen al acceso de la carta-->
+            <img src="img/water_nation_logo.png" alt="Nacion del agua" />
+        </a>
+        <!--Crear la carta que redirige a una sección-->
+        <a href="#maestro_tierra" class="maestro">
+            <!-- añadir la imagen al acceso de la carta-->
+            <img src="img/earth_nation_logo.png" alt="Reino tierra" />
+        </a>
+        <!--Crear la carta que redirige a una sección-->
+        <a href="#maestro_fuego" class="maestro">
+            <!-- añadir la imagen al acceso de la carta-->
+            <img src="img/fire_nation_logo.png" alt="Pais del fuego" />
+        </a>
+        <!--Crear la carta que redirige a una sección-->
+        <a href="#maestro_aire" class="maestro">
+            <!-- añadir la imagen al acceso de la carta-->
+            <img src="img/air_nation_logo.png" alt="Nomadas aire" />
+        </a>
+    </div>
+    <!-- Crear el contenedor para la información de la página-->
+    <!-- Este contenedor se utilizará en todas las secciones de la página-->
+    <div class="container-informacion">
+        <!--Esta seccion da información sencilla de los maestros, por lo que se crea su respectiva sección-->
+        <div class="info_maestro">
+            <!-- Titulo de la seccion-->
+            <!-- Se manejan dos tipos de secciones, las que tienen imagen a la derecha y las que tienen imagen a la izquierda -->
+            <!--Seccion con imagen a la izquierda-->
+            <div class="maestro-izq">
+                <!--Subtitulo con el tipo de maestro-->
+                <p class="subtitle" id="maestro_agua">
+                    Maestro Agua control
+                </p>
+                <!-- Se tiene la imagen del bending-->
+                <img src="img/water_bending.gif" alt="water_bending" class="maestro_imagen" />
+                <!-- En el contenido se coloca un texto corto acerca de la técnica-->
+                <p class="text">
+                    El Agua Control, es uno de los cuatro elementos de las Artes de Control, es el místico arte de
+                    la hidroquinesis que es la habilidad de controlar el agua, así como sus diversas formas. Este
+                    tipo de arte es utilizado por la gente de la Tribu Agua, que se dividen en la del Sur, la del
+                    Norte, y los menos conocidos de la Tribu Agua del Pantano, cada uno con su propio estilo único
+                    de control.
+                </p>
+            </div>
+            <!--Añadir un separador a la página-->
+            <hr>
+            <!--Seccion con imagen a la derecha-->
+            <div class="maestro-der">
+                <!--Subtitulo con el tipo de maestro-->
+                <p class="subtitle" id="maestro_tierra">
+                    Maestro Tierra control
+                </p>
+                <!-- Se tiene la imagen del bending-->
+                <img src="img/earth_bending.gif" alt="earth_bending" class="personaje_imagen" />
+                <!-- En el contenido se coloca un texto corto acerca de la técnica-->
+                <p class="text">
+                    La Tierra Control es el místico arte de la geoquinesis, la habilidad de controlar la tierra con
+                    la mente y se basa en el Hung Gar, que fue elegido porque sus movimientos fuertes que
+                    representan la fuerza de la tierra. Es usado por los Maestros Tierra, quienes residen en todo el
+                    Reino Tierra.
+                </p>
+            </div>
+            <!--Añadir un separador a la página-->
+            <hr>
+            <!--Seccion con imagen a la izquierda-->
+            <div class="maestro-izq">
+                <!--Subtitulo con el tipo de maestro-->
+                <p class="subtitle" id="maestro_fuego">
+                    Maestro Fuego control
+                </p>
+                <!-- Se tiene la imagen del bending-->
+                <img src="img/fire_bending.gif" alt="fire_bending" class="personaje_imagen" />
+                <!-- En el contenido se coloca un texto corto acerca de la técnica-->
+                <p class="text">
+                    El Fuego Control, es una de las cuatro Artes de Control, es la capacidad de la piroquinesis de
+                    crear y controlar el fuego. Es único entre las artes de control, ya que es la única en la que el
+                    ejecutante puede espontáneamente generar el elemento. Los primeros humanos en obtener el "poder
+                    sobre el fuego" vivían en una ciudad sobre un león tortuga, durante la era de Raava, y esta
+                    capacidad más tarde se extendió a los Guerreros del Sol, la Nación del Fuego, y la República
+                    Unida de Naciones.
+                </p>
+            </div>
+            <!--Añadir un separador a la página-->
+            <hr>
+            <!--Seccion con imagen a la derecha-->
+            <div class="maestro-der">
+                <!--Subtitulo con el tipo de maestro-->
+                <p class="subtitle" id="maestro_aire">
+                    Maestro Aire control
+                </p>
+                <!-- Se tiene la imagen del bending-->
+                <img src="img/air_bending.gif" alt="earth_bending" class="personaje_imagen" />
+                <!-- En el contenido se coloca un texto corto acerca de la técnica-->
+                <!-- Informacion de la técnica-->
+                <p class="text">
+                    El Aire Control, uno de los cuatro elementos de las Artes de Control, es la capacidad de la
+                    eoloquinesis de controlar y manipular las corrientes de Aire. Los tranquilos Nómadas Aire
+                    utilizan este tipo de control en su vida cotidiana.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Se crea el footer de la página-->
+    <footer>
+        <!-- Información corta del estudiante-->
+        <div class="info">
+            <p>Juan Sebastián Rodríguez Castellanos</p>
+            <p>Gráfica interactiva</p>
+        </div>
+        <!-- Imagen que redirige al github-->
+        <a href="https://github.com/juarodriguezc">
+            <img src="img/icons8-github-96.png" alt="logo_githubb" class="logo" />
+        </a>
+    </footer>
+</body>
+
+</html>

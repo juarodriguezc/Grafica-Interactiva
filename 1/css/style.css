@@ -1,0 +1,499 @@
+@charset "UTF-8";
+
+@font-face { 
+    font-family: OpenSans;             /* define una fuente */
+    src: url('../fonts/OpenSans.ttf');  /* indica su ubicación */
+}
+
+body {
+    margin: 0;
+    /*Eliminar las margenes del body*/
+    font-family: OpenSans, Arial, Helvetica, sans-serif;
+    /*Indicar la fuente principal del documento*/
+    background-color: rgb(245, 245, 245);
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(158, 137, 0);
+    
+    /*Eliminar el subrayado de las direcciones*/
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+/*Definir las propiedades de la barra de navegación*/
+nav {
+    width: 100%;
+    /*La barra debe cubrir el 100% del ancho de la página*/
+    background-color: rgb(231, 216, 117);
+    /*Definir el color de fondo*/
+    overflow: auto;
+    /*Definir la altura de la barra de navegación*/
+
+}
+
+nav .container-logo {
+    /*Ubicar el contenedor del logo a la izquierda*/
+    float: left;
+    /*Definir un padding del logo*/
+    padding: 8px 20px 0px 20px;
+
+}
+
+nav .container-logo img {
+    /*Establecer las propiedades de la imagen del logo*/
+    height: 60px;
+}
+
+nav .buttons {
+    /*Ubicar los botones de navegación a la derecha*/
+    float: right;
+    /*Establecer una margen derecha de 50px*/
+    margin-right: 50px;
+}
+
+nav .buttons a {
+    /*Establecer el orden de los botones de la barra de navegación*/
+    float: left;
+    /*Establecer el padding de los botones*/
+    padding: 25px 20px;
+    /*Definir el color, la fuente, el font-weight y size*/
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav .buttons a:hover {
+    /*Definir las propiedeades del hover de los botones de navegación*/
+    color: white;
+    background-color: rgb(38, 38, 38);
+}
+
+nav .buttons .active {
+    /*Definir las propiedades del botón actal de la página*/
+    color: white;
+    background-color: rgb(38, 38, 38);
+}
+
+
+/*Definir las propiedades el footer*/
+footer {
+    /*Color de fondo del footer*/
+    background-color: rgb(38, 38, 38);
+    /*Margen del footer*/
+    margin: 80px 0px 0px 0px;
+    color: white;
+    /*Para centrar los elementos se utiliza flex-box*/
+    display: flex;
+    justify-content: center;
+    /*Se establece un font weight para el texto*/
+    font-weight: 600;
+    /*YPadding para el footer*/
+    padding: 10px 0px;
+}
+/*Se establecen las propiedades del logo de github*/
+footer .logo{
+    margin-left: 200px;
+    width: 50px;
+    height: 50px;
+}
+
+/*
+
+Estilos página principal
+
+*/
+
+/*Definir las propiedades del banner*/
+.banner {
+    width: 100%;
+}
+
+.banner img {
+    width: 100%;
+}
+
+/*Definir las propiedades del contenedor de los distintos accesos*/
+.accesos {
+    position: relative;
+    /*El ancho del contenedor es del 90%*/
+    width: 90%;
+    margin: auto;
+    /*Alinear las tarjetas internas*/
+    text-align:center;
+}
+/*Estilo de las tarjeras de información*/
+.accesos .temas {
+    position: relative;
+    display:inline-block;
+    text-decoration: none;
+    /*Aplicar sombre sobre la tarjeta*/
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /*Definir un borde redondeado*/
+    border-radius: 2%;
+    /*Establecer margenes de separación*/
+    margin: -80px 30px 60px 30px;
+    /*Definir el color de fondo*/
+    background-color: rgb(44, 44, 44);
+    /*Tamaño de la tarjeta*/
+    width: 350px;
+    height: 300px;
+}
+/*Cambio de tamaño al hover*/
+.accesos .temas:hover{
+    width: 352px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 25px;
+}
+/*Propiedades de la imagen de la tarjeta*/
+.accesos .temas img{
+    object-fit: cover;
+    border-radius: 2% 2% 0% 0%;
+    width: 100%;
+    height: 75%;
+}
+/*Propiedades del texto en la tarjeta*/
+.accesos .temas p{
+    margin: 20px auto 0px auto;
+    font-weight: 500;
+    font-size: 21px;
+    color:white;
+}
+/*Propiedades del contenedor que se sobrepone*/
+.accesos .temas .overlay{
+    position: absolute;
+    background-color: rgb(212, 195, 78);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+/*Cambio de opacidad al seleccionar*/
+.accesos .temas .overlay:hover{
+    opacity: 0.2;
+}
+
+
+/*Contenedor informacion basica*/
+.container-informacion{
+    /*Definir el ancho del contenedor*/
+    width: 70%;
+    /*COlor de fondo*/
+    background-color: rgb(241, 237, 202);
+    /*Centrado*/
+    margin: auto;
+    padding: 50px 100px;
+    /*Con efecto de sombra*/
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+/*Estilo del separador*/
+.container-informacion hr{
+    border: 0;
+    height: 0;
+    /*Definir ancho y color de borde*/
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/*Definir el estilo para la etiqueta strong deltro del contenedor*/
+.container-informacion strong{
+    font-size: 19px;
+    color: rgb(51, 51, 51);
+}
+
+/*Definir el estilo para el titulo dentro del contenedor*/
+.title{
+    color: rgb(46, 46, 46);
+    font-size: 35px;
+    font-weight: 800;
+}
+
+/*Definir el estilo para titulos centrados*/
+.title_center{
+    color: rgb(46, 46, 46);
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.container-informacion .subtitle{
+    color: rgb(85, 85, 85);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/*Definir modo de presentación de la información*/
+.container-informacion .info_basica{
+    display: flex;
+}
+
+/*Estilo del contenedor izquierdo*/
+.container-informacion .info_basica .left_container{
+    position: relative;
+    /*Padding del contenedor*/
+    padding-right: 100px;
+    /*Tamaño de la fuente*/
+    font-size: 20px;
+    /*Justificacion del texto*/
+    text-align: justify;
+}
+
+/*Definir el estilo para el botón de más información*/
+.container-informacion .button_info{
+    /*Padding para estilo boton*/
+    padding: 10px 20px;
+    /*Centrar el botón horizontalmente*/
+    display:block;
+    text-align:center;
+    /*Ancho del boton*/
+    width:200px;
+    margin:40px auto; 
+    /*Tamaño de la fuente*/
+    font-size: 18px;
+    /*No subrayado*/
+    text-decoration: none;
+    /*Color de fondo y de fuente*/
+    background-color: rgb(92, 92, 92);
+    color:rgb(245, 245, 245)
+}
+
+/*Agregar animación de hover*/
+.container-informacion .button_info:hover{
+    background-color: rgb(59, 59, 59);
+}
+
+
+
+/*Definir las propiedades de la tabla con información*/
+.container-informacion .right_container img{
+    /*ANcho de la imagen*/
+    width: 350px;
+}
+
+/*Definir estilo de borde de la tabla y de la fila*/
+.table_info, .table_info tr{
+    border-collapse: collapse;
+    position: relative;
+    border:1px solid rgb(179, 179, 179);
+}
+
+/*Color de fondo de la fila*/
+.table_info tr{
+    background-color: rgb(253, 253, 253);
+}
+
+/*Establecer el estilo del header de la tabla*/
+.table_info .title_header{
+    /*Color de fondo*/
+    background-color: rgb(226, 226, 226);
+    /*Tamaño fuente*/
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/*Establecer el estilo de la columna de la izquierda*/
+.table_info .column_title{
+    /*Tamaño de la fuente y weight*/
+    font-size: 14px;
+    font-weight: 600;
+    /*Padding left*/
+    padding-left: 10px;
+    background-color: rgb(247, 247, 247);
+    border-right: 1px dashed rgb(226, 226, 226);
+}
+
+/*Establecer el estilo de la columna de la derecha*/
+.table_info .column_info{
+    /*Tamaño de la fuente*/
+    font-size: 15px;
+    /*Padding izquierdo y derecho*/
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+/*Establecer el estilo de la seccion de personajes*/
+.container-informacion .personajes .personaje-izq{
+    /*Se establece el display flex para la visualizacion*/
+    display: flex;
+    margin: 50px 0px 50px 0px;
+}
+
+.container-informacion .personajes .personaje-der{
+    /*Se establece el display flex para la visualizacion*/
+    display: flex;
+    margin: 50px 30px 50px 0px;
+}
+
+/*Establecer el estilo de la imagen*/
+.container-informacion .personajes .personaje_imagen{
+    /*Ancho y alto de la imagen*/
+    width: 300px;
+    height: 200px;
+}
+
+/*Establecer el estilo del efecto de la imagen*/
+.container-informacion .personajes .effect{
+    /*Posición absoluta*/
+    position: absolute;
+    /*Definir el mismo tamaño de la imagen*/
+    width: 300px;
+    height: 200px;
+    /*No cambiar la relacion de aspecto*/
+    object-fit: cover;
+    /*Oculatr el div*/
+    opacity: 0;
+}
+
+/*En caso de hover se va a mostrar la imagen*/
+.container-informacion .personajes .effect:hover{
+    /*Definir una opacodad de 0.5 al mostrar la imagen*/
+    opacity: 0.5;
+}
+
+/*Establecer el estilo del texto con la informacion de los personajes*/
+.container-informacion .personajes .personaje-izq p{
+    /*Margenes del texto cuando está a la izquierda*/
+    margin: 0px 30px 0px 50px;
+    /*Justificación del texto*/
+    text-align: justify;
+}
+
+.container-informacion .personajes .personaje-der p{
+    /*Margenes del texto cuando está a la derecha*/
+    margin: 0px 50px 0px 0px;
+    /*Justificar el texto*/
+    text-align: justify;
+}
+
+/*Establecer un estilo para el texto*/
+.container-informacion .personajes .text{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+
+/*
+
+Estilos página ubicación
+
+*/
+
+/*Se establecen las propiedades del map*/
+.map {
+    text-align: center;
+    margin-bottom: 50px;
+}
+/*Se define el ancho y se centra la imagen con el mapa*/
+.map img{
+    width: 70%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Se estabkece ka argeb de los contenedores con la información*/
+.container-informacion .geografia, .container-informacion .naciones{
+    margin: 20px 0px 50px 0px;
+}
+/*Se establece el tamaño de fuente del titulo*/
+.container-informacion .geografia .title, .container-informacion .naciones .title{
+    font-size: 35px;
+}
+
+/*Se establece el tamaño de la fuente del texto y se justifia*/
+.container-informacion .geografia .content, .container-informacion .naciones .content{
+    font-size: 20px;
+    text-align: justify;
+}
+
+/*Se coloca una margin izquierda al contenido de cada nacion*/
+.container-informacion .naciones .contenido_nacion{
+    margin: 0px 0px 0px 40px;
+}
+/*Se establecen las propiedades de cada una de las naciones*/
+.container-informacion .naciones .nacion{
+    display: flex;
+    text-align: justify;
+    font-size: 20px;
+}
+/*Se separa la imagen del texto con un margin-right*/
+.contenido_nacion .nacion p{
+    margin-right: 80px;
+}
+/*Se define el ancho de la imagen*/
+.nacion .img_nacion{
+    width: 400px;
+}
+
+
+/*
+
+Estilos página habitantes
+
+*/
+
+/*Definir las propiedades del contenedor de los distintos maestros*/
+.maestros{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    text-align:center;
+}
+
+/*Estilo de las tarjeras de información*/
+.maestros .maestro {
+    position: relative;
+    display:inline-block;
+    text-decoration: none;
+    /*Aplicar sombre sobre la tarjeta*/
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /*Definir un borde redondeado*/
+    border-radius: 2%;
+    /*Establecer margenes de separación*/
+    margin: 0px 30px 60px 30px;
+}
+/*Definir el tamaño de la imagen*/
+.maestros .maestro img{
+    object-fit: cover;
+    width: 200px;
+
+}
+/*Cambio de tamaño al hover*/
+.maestros .maestro:hover{
+    width: 205px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 25px;
+}
+
+
+/*
+
+Estilos página historia
+
+*/
+
+/*Se define el estilo del texto para la historia*/
+.container-informacion .texto_historia{
+    font-size: 20px;
+    text-align: justify;
+}
+/*Definir el estilo de la imagen del leon torguga*/
+.container-informacion .leon_tortuga{
+    width: 40%;
+    /*Se centra la imagen*/
+    display: block;
+    margin: auto;
+}
+/*Definir el estilo de la imagen de la guerra de los cien años*/
+.container-informacion .guerra_cien{
+    width: 30%;
+    display: block;
+    margin: auto;
+}
+.container-informacion .avatar_ozai{
+    width: 50%;
+    display: block;
+    margin: auto;
+}

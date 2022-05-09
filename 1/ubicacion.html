@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Se define la codificación de caracteres -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Se define el título de la página-->
+    <title>El mundo de Avatar</title>
+    <!-- llama el archivo estilos.css -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Se define el icono de la página -->
+    <link rel="icon" href="img/icon.svg">
+</head>
+
+<body>
+    <!-- Se crea la barra de navegación-->
+    <nav>
+        <!-- Definir el logo de la barra de navegación -->
+        <div class="container-logo">
+            <a href="index.html">
+                <img src="img/avatar_logo_black.png" alt="Avatar logo" class="logo">
+            </a>
+        </div>
+        <!-- Crear un contenedor para los botones-->
+        <div class="buttons">
+            <!-- Definir cada botón-->
+            <a href="index.html">Inicio</a>
+            <a class="active" href="ubicacion.html">Ubicación</a>
+            <a href="personajes.html">Personajes</a>
+            <a href="actividades.html">Actividades</a>
+            <a href="historia.html">Historia</a>
+            <a href="creditos.html">Créditos</a>
+        </div>
+    </nav>
+
+    <!-- Contenedor del mapa-->
+    <div class="map">
+        <!--Título que se pone en la págima-->
+        <p class="title">Mapa del mundo de Avatar</p>
+        <!--Insertar imagen-->
+        <img src="img/map.jpeg" / alt="mapa mundo Avatar">
+    </div>
+
+    <!--Contenedor de la información-->
+    <div class="container-informacion">
+        <!--Texto inicial acerca de la geografía-->
+        <div class="geografia">
+            <!--Titulo de la sección-->
+            <p class="title">Geografía</p>
+            <!-- Texto de la sección-->
+            <p class="content">
+                El mapa Terrestre está dividido en <strong>cuatro naciones distintas</strong>. Al final de la Guerra de
+                los Cien Años, el
+                <a href="personajes.html#zuko_personaje">Señor del Fuego Zuko</a> y el <a
+                    href="personajes.html#aang_personaje">Avatar Aang</a> transformaron las colonias de la Nación del Fuego
+                ubicadas en el
+                Reino Tierra en un país independiente, la República Unida de Naciones. Cada lugar tiene sus propias
+                distribuciones geográficas, civilizaciones, climas y demografía, así como una gran variedad de
+                accidentes geográficos.
+            </p>
+        </div>
+        <!--Separador-->
+        <hr>
+        <!-- Contenedor con la información de las naciones -->
+        <div class="naciones">
+            <!-- Introducción de las naciones -->
+            <p class="title">Naciones</p>
+            <p class="content">
+                <!--Texto de introducción con a href a distintas naciones-->
+                El mundo de Avatar está dividido en cuatro grandes naciones (cada una con el nombre
+                de uno de los cuatro elementos), las cuales el Avatar debe mantener en armonía: <a
+                    href="#tribu_agua">Las Tribus Agua</a>;
+                <a href="#reino_tierra">El Reino Tierra</a>, <a href="#nacion_fuego">La Nación del Fuego</a> y <a
+                    href="#nomadas_aire">Los Nómadas del Aire</a>.
+            </p>
+            <br />
+            <!-- Información de las tribus agua-->
+            <div class="contenido_nacion">
+                <p class="subtitle" id="tribu_agua">Las Tribus Agua</p>
+                <div class="nacion">
+                    <p>La Tribu Agua es un término colectivo para las personas, de las cuales, unos pocos practican el
+                        arte
+                        del Agua Control, que siguen un sistema de gobierno en la forma de una jefatura tribal. Aunque
+                        los
+                        miembros de la Tribu Agua normalmente habitan en las regiones polares, el Polo Norte y el Polo
+                        Sur,
+                        existe una pequeña población de Maestros Agua que habitan en el pantano brumoso en el territorio
+                        del
+                        Reino Tierra.
+                    </p>
+                    <!-- Imagen de la Tribu Agua-->
+                    <img src="img/tribu_agua.jpg" alt="Tribu agua" class="img_nacion" />
+                </div>
+            </div>
+            <hr>
+            <!-- Información del reino tierra-->
+            <div class="contenido_nacion">
+                <p class="subtitle" id="reino_tierra">El Reino Tierra</p>
+                <div class="nacion">
+                    <p>El Reino Tierra es un continente enorme liderado por el Rey Tierra y es el hogar de las personas
+                        que practican el arte de la Tierra Control. Siendo la mayor de las cuatro naciones, es
+                        étnicamente diversa, con una variación de las costumbres y tradiciones culturales. La gente del
+                        Reino Tierra es fuerte y persistente. La geografía del Reino Tierra varía enormemente, desde
+                        bosques a desiertos ardientes y de terrenos montañosos a llanuras cubiertas de hierba.
+                    </p>
+                    <!-- Imagen del Reino Tierra-->
+                    <img src="img/reino_tierra.jpg" alt="Tribu agua" class="img_nacion" />
+                </div>
+            </div>
+            <hr>
+            <!-- Información de la Nación del Fuego-->
+            <div class="contenido_nacion">
+                <p class="subtitle" id="nacion_fuego">La Nación del Fuego</p>
+                <div class="nacion">
+                    <p>
+                        La Nación del Fuego es el hogar de las personas que practican el arte del Fuego Control y es una
+                        monarquía absoluta dirigida por el Señor del Fuego. Al estar compuesta por varias islas
+                        principales y situadas en el ecuador del planeta, la nación es considerada como un archipiélago.
+                        Su economía es la más grande y poderosa del mundo, con un sector industrial fuerte y avanzados
+                        desarrollos tecnológicos.
+                    </p>
+                    <!-- Imagen de la Nación del Fuego-->
+                    <img src="img/nacion_fuego.jpg" alt="Tribu agua" class="img_nacion" />
+                </div>
+            </div>
+            <hr>
+            <!-- Información de los Nomadas Aire-->
+            <div class="contenido_nacion">
+                <p class="subtitle" id="nomadas_aire">Los Nómadas del Aire</p>
+                <div class="nacion">
+                    <p>
+                        Los Nómadas Aire son una civilización compuesta por personas que practican el arte del Aire
+                        Control. Habitaban cuatro principales Templos Aire, cada uno construido en ubicaciones remotas,
+                        a los cuales sólo se podía llegar fácilmente con el bisonte volador. Los Nómadas Aire son un
+                        grupo muy espiritual. Su economía se basaba exclusivamente en la agricultura, y aunque es la más
+                        pequeña de las cuatro naciones, la totalidad de sus miembros son Maestros.
+                    </p>
+                    <!-- Imagen de los Nomadas Aire-->
+                    <img src="img/nomadas_aire.webp" alt="Tribu agua" class="img_nacion" />
+                </div>
+            </div>
+
+        </div>
+        <hr>
+    </div>
+    <!-- Se crea el footer de la página-->
+    <footer>
+        <!-- Información corta del estudiante-->
+        <div class="info">
+            <p>Juan Sebastián Rodríguez Castellanos &nbsp;&nbsp; - &nbsp;&nbsp; Gráfica interactiva</p>
+        </div>
+        <!-- Imagen que redirige al github-->
+        <a href="https://github.com/juarodriguezc">
+            <img src="img/icons8-github-96.png" alt="logo_githubb" class="logo" />
+        </a>
+    </footer>
+</body>
+
+</html>
