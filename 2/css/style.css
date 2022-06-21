@@ -446,9 +446,9 @@ Estilos página principal
     height: 25%;
     /*Se ubica en la parte inferior de la tarjeta*/
     bottom: 0px;
-    /*Se utiliza un flexbox para centrar el texto horizontal y verticalmente*/
+    /*Se utiliza un flex para centrar el texto horizontal y verticalmente*/
     display: flex;
-    /*Se utilizan  las propiedades del flexbox para centrar*/
+    /*Se utilizan  las propiedades del flex para centrar*/
     justify-content: center;
     align-items: center;
 }
@@ -490,7 +490,7 @@ Estilos página principal
 .container-informacion .info_basica .top_info {
     /*Posición relativa del contenedor*/
     position: relative;
-    /*Se utiliza un flexbox para ajustar los hijos del contenedor*/
+    /*Se utiliza un flex para ajustar los hijos del contenedor*/
     display: flex;
     /*Se ajusta en modo WRAP para mayor facilidad en el RWD*/
     flex-wrap: wrap;
@@ -506,7 +506,7 @@ Estilos página principal
     text-align: justify;
 }
 
-/*A la izquierda del flexbox se tiene información del texto, por lo que el width debe ser calculado respecto al tamaño de la tabla*/
+/*A la izquierda del flex se tiene información del texto, por lo que el width debe ser calculado respecto al tamaño de la tabla*/
 .container-informacion .info_basica .info {
     width: calc(100% - 450px);
 }
@@ -626,7 +626,7 @@ Estilos página Ubicación
 .container-informacion .naciones .nacion {
     /*Se define su posición relativa para enviar los datos a los hijos*/
     position: relative;
-    /*Se utiliza un flexbox para aprovechar sus propiedades de organización*/
+    /*Se utiliza un flex para aprovechar sus propiedades de organización*/
     display: flex;
     /*Se utiliza en modo WRAP para acomodar los contenedores*/
     flex-wrap: wrap;
@@ -695,7 +695,7 @@ Estilos página personajes
 
 /*Se establecen las propiedades del título con el nombre del personaje*/
 .container-informacion .personajes .personaje-izq .subtitle {
-    /*Se deja en order -1 para que sea visto en la parte superior del flexbox*/
+    /*Se deja en order -1 para que sea visto en la parte superior del flex*/
     order: -1;
     /*Se establece un ancho total respecto al contenedor padre*/
     flex: 1 0 100%;
@@ -761,7 +761,7 @@ Estilos página actividades
     width: 90%;
     /*Margen automática*/
     margin: auto;
-    /*Se utilza un flexbox para mayor facilidad en la acomodación de los contenedores hijos*/
+    /*Se utilza un flex para mayor facilidad en la acomodación de los contenedores hijos*/
     display: flex;
     /*Se establece como WRAP para mantener los contenedores en la misma linea*/
     flex-wrap: wrap;
@@ -802,7 +802,7 @@ Estilos página actividades
 
 /*De forma similar a los personajes, se tienen dos tipos de contenedores para los maestros (IZQ - DER)*/
 .container-informacion .info_maestro .maestro-izq {
-    /*Se establece la tarjeta como un flexbox para facilitar la acomodación*/
+    /*Se establece la tarjeta como un flex para facilitar la acomodación*/
     display: flex;
     /*Se define en modo WRAP para mantenerlos en la misma linea si cumplen con un ancho*/
     flex-wrap: wrap;
@@ -815,7 +815,7 @@ Estilos página actividades
 
 /*Se utilizan casi las mismas propiedades para el contenedor maestro_der*/
 .container-informacion .info_maestro .maestro-der {
-    /*Se establece la tarjeta como un flexbox para facilitar la acomodación*/
+    /*Se establece la tarjeta como un flex para facilitar la acomodación*/
     display: flex;
     /*Se define en modo WRAP para mantenerlos en la misma linea si cumplen con un ancho*/
     flex-wrap: wrap;
@@ -843,7 +843,7 @@ Estilos página actividades
 /*Se definen las propiedades del subtitulo de cada maestro*/
 .container-informacion .info_maestro .maestro-izq .subtitle,
 .container-informacion .info_maestro .maestro-der .subtitle {
-    /*Se define order -1 para que funcione como header del flexbox*/
+    /*Se define order -1 para que funcione como header del flex*/
     order: -1;
     /*Se define un ancho del 100%*/
     flex: 1 0 100%;
@@ -1010,7 +1010,7 @@ Cuando la ventana mida menos de 960px
     nav .container-logo {
         /*Eliminar la propiedad float*/
         float: none;
-        /*Centrar el contenedor horizontalmente utilizando un flexbox*/
+        /*Centrar el contenedor horizontalmente utilizando un flex*/
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1028,7 +1028,7 @@ Cuando la ventana mida menos de 960px
         float: none;
         /*Añadir una margin superior de 5px*/
         margin-top: 5px;
-        /*Centrar el contenedor horizontalmente utilizando flexbox*/
+        /*Centrar el contenedor horizontalmente utilizando flex*/
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1055,7 +1055,7 @@ Cuando la ventana mida menos de 960px
 
     /*Es necesario modificar las propiedades del texto del footer*/
     footer p {
-        /*Para el texto del footer se utiliza un flexbox y se centra*/
+        /*Para el texto del footer se utiliza un flex y se centra*/
         display: flex;
         justify-content: center;
     }
@@ -1073,8 +1073,10 @@ Cuando la ventana mida menos de 960px
     }
 
     /*Con resoluciones más pequeñas se busca que la tabla aparezca primero, por lo que se establece WRAP-REVERSE*/
-    .top_info {
+    .container-informacion .info_basica .top_info {
+        /*Se ajusta en modo WRAP-REVERSE para mayor facilidad en el RWD*/
         flex-wrap: wrap-reverse;
+    
     }
 
     /*Propiedades del texto en la tarjeta*/
@@ -1187,7 +1189,7 @@ Cuando la ventana mida menos de 720px
         width: 100%;
         /*Se define la altura del contenedor*/
         height: max-content;
-        /*Para mayor facilidad de modificación, se utiliza un flexbox para cada botón*/
+        /*Para mayor facilidad de modificación, se utiliza un flex para cada botón*/
         display: flex;
         /*Se establece en dirección columna*/
         flex-direction: column;
@@ -1236,7 +1238,7 @@ Cuando la ventana mida menos de 720px
 
     /*Se muestra el botón para mostrar el menu*/
     nav .button_menu {
-        /*Se utiliza flexbox para el botón*/
+        /*Se utiliza flex para el botón*/
         display: flex;
     }
 

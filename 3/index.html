@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Se define la codificación de caracteres -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Se define el título de la página-->
+    <title>El mundo de Avatar</title>
+    <!-- llama el archivo estilos.css -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Se define el icono de la página -->
+    <link rel="icon" href="img/icon.svg">
+</head>
+
+<body>
+    <!-- Se crea la barra de navegación-->
+    <nav>
+        <!-- Definir el contenedor del logo de la barra de navegación -->
+        <div class="container-logo">
+            <!--Se da la propiedad de redirección al hacer clic sobre el logo-->
+            <a href="index.html">
+                <!-- Añadir el logo de la barra de navegación-->
+                <img src="img/avatar_logo_black.png" alt="Avatar logo" class="logo">
+            </a>
+        </div>
+        <!-- Crear el selector para el menu responsive-->
+        <input type="checkbox" id="btn-menu">
+        <!-- Crear el label para el botón de expandir el menu-->
+        <label for="btn-menu">
+            <div class="button_menu not-selectable">
+                <!--Seleccionar entre dos imagenes a mostrar en el botón-->
+                <img src="img/icons8-menu-100.svg" alt="menu logo" class="menu" />
+                <img src="img/icons8-x-100.png" alt="cancel logo" class="exit" />
+            </div>
+        </label>
+        <!-- Crear un contenedor para los botones-->
+        <div class="buttons">
+            <!-- Definir cada botón-->
+            <!--Definir el botón de la página actual-->
+            <a class="active" href="index.html">Inicio</a>
+            <a href="naciones.html">Naciones</a>
+            <a href="personajes.html">Personajes</a>
+            <a href="actividades.html">Actividades</a>
+            <a href="historia.html">Historia</a>
+            <a href="mapa.html">Mapa</a>
+            <a href="creditos.html">Créditos</a>
+        </div>
+    </nav>
+    <!-- Crear el banner de la página de inicio-->
+    <div class="banner">
+        <!--Añadir la imagen del banner-->
+        <img src="img/banner.jpg" alt="Banner" />
+    </div>
+    <!--Creaer título para la sección móvil, este título no será visible sino hasta que se legre un tamaño específico-->
+    <div class="accesos_container">
+        <!--Título que se pone en la página-->
+        <p class="title">Accesos</p>
+        <!-- Crear el selector para el menu responsive-->
+        <input type="checkbox" id="btn-accesos">
+        <!-- Crear el label para el botón de expandir el menu-->
+        <label for="btn-accesos">
+            <div class="button_accesos not-selectable">
+                <!--Seleccionar entre dos imagenes a mostrar en el botón-->
+                <!-- En este caso se tiene la misma imagen pero una es una animacion y otra es un frame de la misma-->
+                <img src="img/services_sttic.png" alt="accesos_estatico" class="static" />
+                <img src="img/services_animated.gif" alt="accesos_animado" class="animated" />
+            </div>
+        </label>
+        <!-- Crear unas cartas con acceso a distintos temas de la página-->
+        <div class="accesos">
+            <!-- Crear cada carta-->
+            <a href="#informacion_section" class="temas">
+                <!-- Crear un overlay para el hover-->
+                <div class="overlay"></div>
+                <!-- añadir la imagen y el título de la tarjeta-->
+                <img src="img/informacion.jpg" alt="Informacion" />
+                <!-- Crear parte inferior de la tarjeta con el nombre de la carta-->
+                <div class="text_container">
+                    <p>Información</p>
+                </div>
+            </a>
+            <a href="#sinopsis_section" class="temas">
+                <!-- Crear un overlay para el hover-->
+                <div class="overlay"></div>
+                <!-- añadir la imagen y el título de la tarjeta-->
+                <img src="img/lugares.jpg" alt="Sinopsis" />
+                <div class="text_container">
+                    <p>Sinopsis</p>
+                </div>
+            </a>
+            <a href="personajes.html#personajes_section" class="temas">
+                <!-- Crear un overlay para el hover-->
+                <div class="overlay"></div>
+                <!-- añadir la imagen y el título de la tarjeta-->
+                <img src="img/personajes2.jpg" alt="Personajes" />
+                <div class="text_container">
+                    <p>Personajes principales</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Crear el contenedor para la información de la página-->
+    <!-- Este contenedor se utilizará en todas las secciones de la página-->
+    <div class="container-informacion">
+        <!--Titulo de la seccion-->
+        <p class="title" id="informacion_section">Información de la serie</p>
+        <!--Separador de contenido-->
+        <hr />
+        <!--Crear un div para la información de la serie-->
+        <div class="info_basica">
+            <!--Crear otro div para la parte superior de la información (Información serie y tabla de información)-->
+            <div class="top_info">
+                <!-- En el contenedor izquierdo va la información en texto-->
+                <div class="info">
+                    <!--Subtitulo de la seccion-->
+                    <p class="subtitle">Avatar: La Leyenda de Aang</p>
+                    <!-- Información de la serie y etiqueta STRONG para resaltar texto-->
+                    <p>
+                        Avatar: La Leyenda de Aang
+                        <strong> (Avatar: The Last Airbender en su versión original)</strong>,
+                        también conocida como
+                        <strong>Avatar: The Legend of Aang</strong>
+                        en Europa o <strong>Avatar: El Último Maestro Aire</strong> ocasionalmente, es una serie
+                        animada de televisión ganadora del premio Emmy que se emitió durante tres temporadas en <a
+                            href="https://www.nickelodeon.la/">Nickelodeon</a> y la Red de
+                        Nicktoons.
+                    </p>
+                    <p>
+                        <!--Se utiliza la etiqueta STRONG para resaltar texto-->
+                        La serie fue creada y producida por <strong>Michael Dante DiMartino</strong> y
+                        <strong>Bryan Konietzko</strong>, quienes se
+                        desempeñaron como productores ejecutivos, junto con <strong>Aaron Ehasz</strong>. Se desarrolló
+                        en los Estudios de Animación de
+                        <a href="https://www.nickelodeon.la/">Nickelodeon</a> en Burbank, California y animada en Corea
+                        del Sur.
+                    </p>
+                    <p>
+                        La serie sigue las aventuras del protagonista principal, <a
+                            href="personajes.html#aang_personaje">Aang</a> y
+                        sus amigos, quienes deben salvar
+                        al
+                        mundo al derrotar al Señor del Fuego y poner fin a la guerra destructiva con la Nación del
+                        Fuego. El
+                        primer programa se transmitió el 21 de febrero de 2005 y la serie concluyó con una película para
+                        televisión de dos horas ampliamente alabada el 19 de julio de 2008.
+                    </p>
+                    <!-- Crear botón que redirija a la pagina del fandom de Avatar-->
+                    <a href="https://avatar.fandom.com/es/wiki/Avatar:_La_Leyenda_de_Aang" class="button_info">Más
+                        información</a>
+
+                </div>
+                <!--Creación de la tabla con información importante de la serie-->
+                <table class="table_info">
+                    <!-- En la primera fila va la imagen, esta va a tener 2 columnas-->
+                    <tr>
+                        <!-- Su usa colspan para el numero de columnas-->
+                        <th scope="col" colspan="2">
+                            <!-- Imagen de Avatar-->
+                            <img src="img/avatar_logo_info2.jpg" alt="Avatar informacion" class="imagen_avatar" />
+                        </th>
+                    </tr>
+                    <!-- La segunda fila va a tener otro header para el título-->
+                    <tr class="title_header">
+                        <!-- Se mantiene el colspan para definir las columnas-->
+                        <th scope="col" colspan="2">
+                            <p>Información general</p>
+                        </th>
+                    </tr>
+                    <!-- FIla con información de los creadores-->
+                    <tr>
+                        <!--Columna izquierda de Autor-->
+                        <td class="column_title">
+                            <p>
+                                Creado por:
+                            </p>
+                        </td>
+                        <!--Columna derecha de Autores-->
+                        <td class="column_info">
+                            <p>
+                                Michael Dante DiMartino
+                            </p>
+                            <p>
+                                Bryan Konietzko
+                            </p>
+                        </td>
+                    </tr>
+                    <!-- Fila con información de la fecha de lanzamiento-->
+                    <tr>
+                        <!--Columna izquierda de Fecha de lanzamiento-->
+                        <td class="column_title">
+                            <p>
+                                Fecha de lanzamiento:
+                            </p>
+                        </td>
+                        <!--Columna derecha de Fecha de lanzamiento-->
+                        <td class="column_info">
+                            <p>
+                                21 de febrero de 2005
+                            </p>
+                        </td>
+                    </tr>
+                    <!-- Fila con información de los episodios-->
+                    <tr>
+                        <!--Columna izquierda de Número de episodios-->
+                        <td class="column_title">
+                            <p>
+                                Episodios:
+                            </p>
+
+                        </td>
+                        <!--Columna derecha de Número de episodios -->
+                        <td class="column_info">
+                            <p>
+                                61 (serie completa)
+                            </p>
+                        </td>
+                    </tr>
+                    <!-- Fila con información del canal-->
+                    <tr>
+                        <!--Columna izquierda información CANAL-->
+                        <td class="column_title">
+                            <p>
+                                Canal:
+                            </p>
+                        </td>
+                        <!--Columna derecha información CANAL-->
+                        <td class="column_info">
+                            <p>
+                                Nickelodeon
+                            </p>
+                        </td>
+                    </tr>
+                    <!-- Fila con información del estado-->
+                    <tr>
+                        <td class="column_title">
+                            <p>
+                                Estado:
+                            </p>
+
+                        </td>
+                        <td class="column_info">
+                            <p>
+                                Re-emitiéndose
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+            <!-- Crear otra sección para la sinopsis-->
+            <div class="sinopsis">
+                <!--Separador de contenido-->
+                <hr />
+                <!-- Titulo de la seccion-->
+                <p class="title" id="sinopsis_section">Sinopsis</p>
+                <!-- Contenido-->
+                <p class="text">
+                    La historia transcurre en un mundo de influencia principalmente Asiática, donde predominan las
+                    artes marciales y la manipulación de los elementos en combinación con el misticismo oriental,
+                    dando seguimiento a las aventuras de <a href="personajes.html#aang_personaje">Aang</a>, el más
+                    reciente sucesor
+                    de una larga línea de
+                    avatares, y sus amigos en un intento por salvar su místico mundo de la despiadada Nación del
+                    Fuego que busca conquistar a las demás naciones. Durante sus travesías son acechados
+                    insistentemente por el desterrado <a href="personajes.html#zuko_personaje">Príncipe del Fuego
+                        Zuko</a>, cuyo
+                    objetivo es capturar al avatar
+                    para recuperar su honor.
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Se crea el footer de la página-->
+    <footer>
+        <!-- Información corta del estudiante-->
+        <div class="info">
+            <p>Juan Sebastián Rodríguez Castellanos</p>
+            <p>Gráfica interactiva</p>
+        </div>
+        <!-- Imagen que redirige al github-->
+        <a href="https://github.com/juarodriguezc">
+            <img src="img/icons8-github-96.png" alt="logo_githubb" class="logo" />
+        </a>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Se define la codificación de caracteres -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Se define el título de la página-->
+    <title>El mundo de Avatar</title>
+    <!-- llama el archivo estilos.css -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Se define el icono de la página -->
+    <link rel="icon" href="img/icon.svg">
+</head>
+
+<body>
+    <!-- Se crea la barra de navegación-->
+    <nav>
+        <!-- Definir el logo de la barra de navegación -->
+        <div class="container-logo">
+            <!--Se da la propiedad de redirección al hacer clic sobre el logo-->
+            <a href="index.html">
+                <!-- Añadir el logo de la barra de navegación-->
+                <img src="img/avatar_logo_black.png" alt="Avatar logo" class="logo">
+            </a>
+        </div>
+        <!-- Crear el selector para el menu responsive-->
+        <input type="checkbox" id="btn-menu">
+        <!-- Crear el label para el botón de expandir el menu-->
+        <label for="btn-menu">
+            <div class="button_menu not-selectable">
+                <!--Seleccionar entre dos imagenes a mostrar en el botón-->
+                <img src="img/icons8-menu-100.svg" alt="menu logo" class="menu" />
+                <img src="img/icons8-x-100.png" alt="cancel logo" class="exit" />
+            </div>
+        </label>
+        <!-- Crear un contenedor para los botones-->
+        <div class="buttons">
+            <!-- Definir cada botón-->
+            <a href="index.html">Inicio</a>
+            <a href="naciones.html">Naciones</a>
+            <a href="personajes.html">Personajes</a>
+            <a href="actividades.html">Actividades</a>
+            <a href="historia.html">Historia</a>
+            <a href="mapa.html">Mapa</a>
+            <!--Definir el botón de la página actual-->
+            <a class="active" href="creditos.html">Créditos</a>
+        </div>
+    </nav>
+    <!--Crear separador sin css-->
+    <br />
+    <br />
+    <br />
+    <!-- Crear el contenedor para la información de la página-->
+    <!-- Este contenedor se utilizará en todas las secciones de la página-->
+    <div class="container-informacion">
+        <div class="explicacion">
+            <p class="subtitle">Explicación propuesta:</p>
+            <p>
+                En esta página se muestra de forma interactiva información de la serie <strong>Avatar, La leyenda de
+                    Aang</strong>, en la página de <strong>inicio</strong> se presenta información básica de la serie y
+                una sinopsis; en la página de Naciones, se presenta información de cada una de las cuatro naciones; en la
+                página <strong>personajes</strong> se resume de forma breve la historia de los personajes principales; en
+                la página <strong>historia</strong>, se menciona muy resumidamente la historia de la serie. 
+            </p>
+            <p>
+                La última sección es la denominada <strong>mapa</strong>, la cual presenta un mapa interactivo con los lugares
+                más importantes de la serie, este mapa está diseñado para funcionar en todo tipo de dispositivo, gracias a las 
+                funcionalidades responsive de Phaser 3. Para utilizar el mapa se debe hacer clic o seleccionar cada uno de los botones
+                flotantes en el mapa, al hacer esto se despliega un menú lateral con información del lugar. Para finalizar, la
+                última página del sitio web es <strong>créditos</strong>, donde se presenta la explicación de la propuesta, los créditos
+                de las distintas imagenes y fuentes de información, y el mapa de navegación.
+            </p>
+            <br>
+        </div>
+        <!--Esta sección se usa para los crédtos de la página-->
+        <div class="creditos">
+            <!--Titulo para la fuente de información-->
+            <p class="subtitle">Información obtenida de:</p>
+            <!--Se crea una lista para las referencias-->
+            <ul>
+                <li>
+                    <!-- Cada link redirige a su respectiva páginas-->
+                    <a
+                        href="https://avatar.fandom.com/es/wiki/Historia_en_el_Mundo_Avatar">https://avatar.fandom.com/es/wiki/Historia_en_el_Mundo_Avatar</a>
+                </li>
+                <li>
+                    <!-- Cada link redirige a su respectiva páginas-->
+                    <a
+                        href="https://avatar.fandom.com/es/wiki/Avatar_Wiki">https://avatar.fandom.com/es/wiki/Avatar_Wiki</a>
+                </li>
+                <li>
+                    <!-- Cada link redirige a su respectiva páginas-->
+                    <a
+                        href="https://en.wikipedia.org/wiki/Avatar:_The_Last_Airbender">https://en.wikipedia.org/wiki/Avatar:_The_Last_Airbender</a>
+                </li>
+            </ul>
+            <!--  Se crea otra lista para las referencias de las imagenes-->
+            <p class="subtitle">Imagenes obtenidas de:</p>
+            <ul>
+                <li>
+                    <!-- Cada link redirige a su respectiva páginas-->
+                    <a href="http://i.imgur.com/YCfWJGx.jpg">http://i.imgur.com/YCfWJGx.jpg</a>
+                </li>
+                <li>
+                    <!-- Cada link redirige a su respectiva páginas-->
+                    <a
+                        href="https://i.pinimg.com/originals/fb/b2/6b/fbb26b146d5d46b98186dde13321d815.jpg">https://i.pinimg.com/originals/fb/b2/6b/fbb26b146d5d46b98186dde13321d815.jpg</a>
+                </li>
+                <li>
+                    <!-- Cada link redirige a su respectiva páginas-->
+                    <a
+                        href="https://static.wikia.nocookie.net/avatar/images/1/13/Restored_Eastern_Air_Temple.png/revision/latest?cb=20131102115726">https://static.wikia.nocookie.net/avatar/images/1/13/Restored_Eastern_Air_Temple.png/revision/latest?cb=20131102115726</a>
+                </li>
+                <li>
+                    <!-- Cada link redirige a su respectiva páginas-->
+                    <a
+                        href="https://static.wikia.nocookie.net/nickelodeon/images/3/3c/Avatar-_The_Last_Airbender_characters.jpg/revision/latest?cb=20170205223742">https://static.wikia.nocookie.net/nickelodeon/images/3/3c/Avatar-_The_Last_Airbender_characters.jpg/revision/latest?cb=20170205223742</a>
+                </li>
+                <li>
+                    <!-- Cada link redirige a su respectiva páginas-->
+                    <a
+                        href="https://image.cdn0.buscalibre.com/54b0011f980774bd028b4567.__RS360x360__.jpg">https://image.cdn0.buscalibre.com/54b0011f980774bd028b4567.__RS360x360__.jpg</a>
+                </li>
+                <li>
+                    <!-- Cada link redirige a su respectiva páginas-->
+                    <a
+                        href="https://m.media-amazon.com/images/I/8109cMMF7LS._AC_SY450_.jpg">https://m.media-amazon.com/images/I/8109cMMF7LS._AC_SY450_.jpg</a>
+                </li>
+                <li>
+                    <!-- Cada link redirige a su respectiva páginas-->
+                    <a
+                        href="https://www.cultture.com/pics/2020/08/avatar-el-ultimo-maestro-aire-trivialidades-que-no-sabias-de-las-tribus-del-agua-4.jpg">https://www.cultture.com/pics/2020/08/avatar-el-ultimo-maestro-aire-trivialidades-que-no-sabias-de-las-tribus-del-agua-4.jpg</a>
+                </li>
+                <li>
+                    <!-- Cada link redirige a su respectiva páginas-->
+                    <a
+                        href="https://static.wikia.nocookie.net/avatar/images/6/64/Templo_Aire_del_Sur_restaurado.png/revision/latest?cb=20200322043248&path-prefix=es">https://static.wikia.nocookie.net/avatar/images/6/64/Templo_Aire_del_Sur_restaurado.png/revision/latest?cb=20200322043248&path-prefix=es</a>
+                </li>
+                <li>
+                    <!-- Cada link redirige a su respectiva páginas-->
+                    <a
+                        href="https://avatar.fandom.com/es/wiki/Avatar_Wiki">https://avatar.fandom.com/es/wiki/Avatar_Wiki</a>
+                </li>
+            </ul>
+            <!--Título para el mapa  de navegación-->
+            <p class="subtitle">Mapa de navegación:</p>
+            <!--Añadir el mapa de navegación-->
+            <img src="img/mapa_navegacion.png" alt="mapa de navegación" class="mapa_navegacion" />
+            <!-- Título para la información del autor-->
+            <p class="subtitle">Información del autor:</p>
+            <!--Información del autor-->
+            <p>Juan Sebastián Rodríguez Castellanos</p>
+            <p>Ingeniería de sistemas y computación</p>
+            <!--Imagen de decoración-->
+            <img src="img/keyboard.gif" alt="keyboard cat" />
+        </div>
+    </div>
+    <!-- Se crea el footer de la página-->
+    <footer>
+        <!-- Información corta del estudiante-->
+        <div class="info">
+            <p>Juan Sebastián Rodríguez Castellanos</p>
+            <p>Gráfica interactiva</p>
+        </div>
+        <!-- Imagen que redirige al github-->
+        <a href="https://github.com/juarodriguezc">
+            <img src="img/icons8-github-96.png" alt="logo_githubb" class="logo" />
+        </a>
+    </footer>
+</body>
+
+</html>

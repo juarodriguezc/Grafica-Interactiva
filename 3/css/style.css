@@ -1,0 +1,1386 @@
+@charset "UTF-8";
+
+/*Importar una fuente personalizada*/
+@font-face {
+    font-family: OpenSans;
+    /* define una fuente */
+    src: url('../fonts/OpenSans.ttf');
+    /* indica su ubicación */
+}
+
+/*
+/////////////////////////////
+Estilos para todas las páginas
+/////////////////////////////
+*/
+
+/*Añadir las propiedades del body*/
+body {
+    position: relative;
+    /*Eliminar las margenes del body*/
+    margin: 0;
+    /*Usar la fuente importada o en caso de error tener otras opciones*/
+    font-family: OpenSans, Arial, Helvetica, sans-serif;
+    /*Definir el color de fondo predeterminado*/
+    background-color: rgb(245, 245, 245);
+}
+
+/*Propiedad para evitar la selección de un botón, importado de StackOverflow*/
+.not-selectable {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+/*Definir las propiedades de los hipervinculos*/
+a {
+    /*Eliminar el subrayado de las direcciones*/
+    text-decoration: none;
+    /*Añadir negrilla en los textos*/
+    font-weight: 600;
+    /*Cambiar el color*/
+    color: rgb(158, 137, 0);
+    /*Añadir la propiedad word-wrap para que el responsive funcione correctamente*/
+    word-wrap: break-word;
+}
+
+/*Definir las propiedades en hover*/
+a:hover {
+    /*En este caso los hipervinculos seleccionados tendran subrayado*/
+    text-decoration: underline;
+}
+
+/*Definir las propiedades de la barra de navegación*/
+nav {
+    /*Se establece la posición relativa para los componente hijos*/
+    position: relative;
+    /*La barra debe cubrir el 100% del ancho de la página*/
+    width: 100%;
+    /*Definir el color de fondo*/
+    background-color: rgb(231, 216, 117);
+    /*Se establece la propiedad overflow auto para la visualización correcta de la barra, evitando overflow*/
+    overflow: auto;
+    /*Se define la altura de la barra*/
+    height: 83px;
+}
+
+/*Establecer las propiedades del contenedor del logo*/
+nav .container-logo {
+    /*Ubicar el contenedor del logo a la izquierda*/
+    float: left;
+    /*Definir un padding del logo*/
+    margin: 8px 1% 0px 1%;
+}
+
+/*Establecer las propiedades de la imagen del logo*/
+nav .container-logo img {
+    /*Alturo de 60px y with automático*/
+    height: 60px;
+    width: auto;
+}
+
+/*Se establecen las propiedades del contenedor de botones*/
+nav .buttons {
+    /*Los botones deben tener una altura del 100% respecto al padre*/
+    height: 100%;
+    /*Ubicar los botones de navegación a la derecha*/
+    float: right;
+    /*Establecer una margen derecha de 1% del ancho total de la barra de navegación*/
+    margin-right: 1%;
+}
+
+/*Establecer las propiedades de cada uno de los botones*/
+nav .buttons a {
+    /*Establecer el orden de los botones de la barra de navegación*/
+    float: left;
+    /*Establecer el padding de los botones*/
+    padding: 30px 20px;
+    /*Definir el color, la fuente, el font-weight y size*/
+    color: black;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/*Definir las propiedades del botón al realizar hover*/
+nav .buttons a:hover {
+    /*Cambiar el color de la letra*/
+    color: white;
+    /*Establecer el color de fondo del botón*/
+    background-color: rgb(38, 38, 38);
+}
+
+/*Definir las propiedades del botón actal de la página*/
+nav .buttons .active {
+    /*Color de letra blanco*/
+    color: white;
+    /*Color negro de botón*/
+    background-color: rgb(38, 38, 38);
+}
+
+/*Definir las propiedades del label del responsive*/
+nav #btn-menu {
+    /*Establecer su posición como absoluta*/
+    position: absolute;
+    /*Que no sea visible*/
+    opacity: 0;
+    /*Que no se pueda hacer clic sobre el mismo*/
+    pointer-events: none;
+}
+
+/*Establecer las propiedeades del botón relacionado al label btn_menu*/
+nav .button_menu {
+    /*Posición absoluta respecto a la barra de navegación*/
+    position: absolute;
+    /*Definir ancho y alto del botón*/
+    width: 50px;
+    height: 50px;
+    /*Definir el color de fondo del botón*/
+    background-color: rgb(245, 245, 245);
+    /*El botón tiene borde curvo*/
+    border-radius: 1px;
+    /*Cuando se pase el cursor sobre el botón este cambia a pointer*/
+    cursor: pointer;
+    /*Va a estar oculto en pantallas grandes*/
+    display: none;
+    /*se define su ubicación con top and right debido a  que está en posición absoluta*/
+    top: 8px;
+    right: 8px;
+}
+
+/*Establecer las propiedades en hover*/
+nav .button_menu:hover {
+    /*Cambiar el color de fondo*/
+    background-color: rgb(230, 230, 230);
+}
+
+/*Definir las propiedades de las imagenes dentro del botón*/
+nav .button_menu img {
+    /*Se centra la imagen interna vertical y horizontalmente*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*Se define el ancho de la imagen*/
+    width: 28px;
+}
+
+/*La imagen de menú debe ser la visible cuando el botón se muestre*/
+nav .button_menu .menu {
+    /*Mantener visible la imagen*/
+    opacity: 1;
+    visibility: visible;
+}
+
+/*La imagen de salir NO debe ser la visible cuando el botón se muestre*/
+nav .button_menu .exit {
+    /*Mantener oculta la imagen*/
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*Definir las propiedades el footer*/
+footer {
+    /*Definir la posición relativa para sus hijos*/
+    position: relative;
+    /*Color de fondo del footer*/
+    background-color: rgb(38, 38, 38);
+    /*Margen del footer*/
+    margin: 80px 0px 0px 0px;
+    /*Definir el color de letra*/
+    color: white;
+    /*Para centrar los elementos se utiliza flex-box*/
+    display: flex;
+    justify-content: center;
+    /*Se establece un font weight para el texto*/
+    font-weight: 600;
+    /*Padding para el footer*/
+    padding: 10px 0px;
+}
+
+/*Definir las propiedades del texto del footer*/
+footer p {
+    /*Display en modo inline-block para su visualización*/
+    display: inline-block;
+    /*Definir un margin inline para separar los textos*/
+    margin-inline: 25px;
+}
+
+/*Se establecen las propiedades del logo de github*/
+footer .logo {
+    /*Ancho y alto*/
+    width: 50px;
+    height: 50px;
+}
+
+/*Se definen las propiedades del contenedor de información, este se usa en todas las páginas*/
+.container-informacion {
+    position: relative;
+    /*Definir el ancho del contenedor*/
+    width: 70%;
+    /*COlor de fondo*/
+    background-color: rgb(241, 237, 202);
+    /*Centrado*/
+    margin: auto;
+    padding: 4% 4%;
+    /*Con efecto de sombra*/
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/*Estilo del separador*/
+.container-informacion hr {
+    border: 0;
+    height: 0;
+    /*Definir ancho y color de borde*/
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/*Definir el estilo para la etiqueta strong deltro del contenedor*/
+.container-informacion strong {
+    font-size: 19px;
+    color: rgb(51, 51, 51);
+}
+
+/*Definir el estilo para los títulos*/
+.title {
+    /*Color de fuente*/
+    color: rgb(46, 46, 46);
+    /*Tamaño de letra*/
+    font-size: 35px;
+    /*Texto en negrilla*/
+    font-weight: 800;
+}
+
+/*Definir el estilo para titulos centrados*/
+.title_center {
+    color: rgb(46, 46, 46);
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.container-informacion .subtitle {
+    color: rgb(85, 85, 85);
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/*
+/////////////////////////////
+Estilos página principal
+/////////////////////////////
+*/
+
+/*Definir las propiedades del banner*/
+.banner {
+    /*Ancho del 100% respecto al tamaño del body*/
+    width: 100%;
+}
+
+/*Definir las propiedades de la imagen del banner*/
+.banner img {
+    /*Ancho del 100% respecto al tamaño del body*/
+    width: 100%;
+}
+
+/*Definir las propiedades del contenedor de accesos*/
+.accesos_container {
+    /*Se define la posición relativa para los hijos*/
+    position: relative;
+    /*Margin top negativo para dar estilo de sobreposición*/
+    margin-top: -20px;
+    /*El contenedor debe tener un tamaño de 100%  respecto al body*/
+    width: 100%;
+    text-align: center;
+}
+
+/*Establecer las propiedades del label btn-accesos, el cual solo se muestra en pantalles de teléfonos*/
+.accesos_container #btn-accesos {
+    /*Debe ser de posición absoluta*/
+    position: absolute;
+    /*No mostrarse*/
+    opacity: 0;
+    /*No poder hacer clic sobre el label por error*/
+    pointer-events: none;
+}
+
+/*Definir las propiedades del botón relacionado al label btn-accesos*/
+.accesos_container .button_accesos {
+    /*Posición absoluta*/
+    position: absolute;
+    /*Ancho y alto del botón*/
+    width: 50px;
+    height: 50px;
+    /*Color del botón*/
+    background-color: rgb(231, 216, 117);
+    /*Bordes redondeados*/
+    border-radius: 2px;
+    /*cambiar el estílo del cursor al pasar por encima*/
+    cursor: pointer;
+    /*Definir la posición con top y right debido a su posición absoluta*/
+    top: 0px;
+    right: 10%;
+    /*Ocultar el botón*/
+    display: none;
+}
+
+/*Definir las propiedades del icono interno del botón*/
+.accesos_container .button_accesos img {
+    /*Centrar las imagenes vertical y horizontalmente*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /*Definir el tamaño de la imagen*/
+    width: 40px;
+}
+
+/*El botón estático debe ser visible cuando no hay hover y está en pantallas pequeñas*/
+.accesos_container .button_accesos .static {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*El botón animado no debe ser visible*/
+.accesos_container .button_accesos .animated {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*Definir las propiedades del contenedor de los distintos accesos*/
+.accesos {
+    /*El ancho del contenedor es del 90%*/
+    width: 90%;
+    /*Se centra horizontalmente*/
+    margin: auto;
+    /*Alinear las tarjetas internas*/
+    text-align: center;
+}
+
+/*Estilo de las tarjeras de información*/
+.accesos .temas {
+    /*Se define la posición relativa para los hijos*/
+    position: relative;
+    /*Se establece display inline-block para la visualización horizontal*/
+    display: inline-block;
+    /*Se quita la decoración del texto*/
+    text-decoration: none;
+    /*Aplicar sombra sobre la tarjeta*/
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /*Definir un borde redondeado*/
+    border-radius: 2%;
+    /*Establecer margenes de separación*/
+    margin: -180px 1% 60px 0%;
+    /*Definir el color de fondo*/
+    background-color: rgb(44, 44, 44);
+    /*Tamaño de la tarjeta*/
+    height: 0px;
+    width: 30%;
+    /*Establecer un padding superior del 23%*/
+    padding-top: 23%;
+}
+
+/*Cambio de tamaño al hover*/
+.accesos .temas:hover {
+    /*Solo se cambia el ancho de la tarjeta y la sombra*/
+    width: 30.5%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 25px;
+}
+
+/*Propiedades del contenedor que se sobrepone, este da el efecto de selección sobre toda la tarjeta*/
+.accesos .temas .overlay {
+    /*Para evitar que afecte la tarjeta, se define como posición absoluta*/
+    position: absolute;
+    /*Como la tarjeta tiene posición relativa, se coloca en la esquina superior izquierda*/
+    top: 0px;
+    left: 0px;
+    /*Se define un Z-index mayor para la sobreposición*/
+    z-index: 1;
+    /*Se establece el color del contenedor*/
+    background-color: rgb(212, 195, 78);
+    /*El tamaño es el 100% del padre*/
+    width: 100%;
+    height: 100%;
+    /*Se mantiene oculto*/
+    opacity: 0;
+}
+
+/*Cambio de opacidad al hacer hover, de modo que se vea la animación*/
+.accesos .temas .overlay:hover {
+    /*Cambio de la opacidad*/
+    opacity: 0.2;
+}
+
+/*Propiedades de la imagen de la tarjeta*/
+.accesos .temas img {
+    /*Se define la imagen como posición absoluta*/
+    position: absolute;
+    /*Se ubica en la esquina superior izquierda*/
+    top: 0px;
+    left: 0px;
+    /*Se mantiene la relación de aspecto de la imagen*/
+    object-fit: cover;
+    /*Se redondean las esquinas de la imagen*/
+    border-radius: 2% 2% 0% 0%;
+    /*Se define un ancho del 100% y altura del 75%*/
+    width: 100%;
+    height: 75%;
+}
+
+/*Definir las propiedades del contenedor con el nombre de la sección de la tarjeta*/
+.accesos .temas .text_container {
+    /*Se define su posición absoluta respecto al padre*/
+    position: absolute;
+    /*Width del 100% y height de 25% respecto al padre*/
+    width: 100%;
+    height: 25%;
+    /*Se ubica en la parte inferior de la tarjeta*/
+    bottom: 0px;
+    /*Se utiliza un flex para centrar el texto horizontal y verticalmente*/
+    display: flex;
+    /*Se utilizan  las propiedades del flex para centrar*/
+    justify-content: center;
+    align-items: center;
+}
+
+/*Propiedades del texto en la tarjeta*/
+.accesos .temas p {
+    /*Se define texto en negrilla, color de letra y tamaño de fuente*/
+    font-weight: 600;
+    font-size: 24px;
+    color: white;
+}
+
+/*Definir el estilo para el botón de más información*/
+.container-informacion .button_info {
+    /*Padding para estilo boton*/
+    padding: 10px 20px;
+    /*Centrar el botón horizontalmente*/
+    display: block;
+    text-align: center;
+    /*Ancho del boton*/
+    width: 200px;
+    margin: 100px auto;
+    /*Tamaño de la fuente*/
+    font-size: 18px;
+    /*No subrayado*/
+    text-decoration: none;
+    /*Color de fondo y de fuente*/
+    background-color: rgb(92, 92, 92);
+    color: rgb(245, 245, 245)
+}
+
+/*Agregar animación de hover*/
+.container-informacion .button_info:hover {
+    /*Cambiar el color de fondo al hacer hover*/
+    background-color: rgb(59, 59, 59);
+}
+
+/*Definir modo de presentación de la información, en este caso el contenedor superior con la información y la tabla*/
+.container-informacion .info_basica .top_info {
+    /*Posición relativa del contenedor*/
+    position: relative;
+    /*Se utiliza un flex para ajustar los hijos del contenedor*/
+    display: flex;
+    /*Se ajusta en modo WRAP para mayor facilidad en el RWD*/
+    flex-wrap: wrap;
+    /*Se justifica el contenido*/
+    justify-content: space-around;
+}
+
+/*Se establecen las propiedades del texto dentro del contenedor de información básica*/
+.container-informacion .info_basica {
+    /*Tamaño de la fuente*/
+    font-size: 20px;
+    /*Justificacion del texto*/
+    text-align: justify;
+}
+
+/*A la izquierda del flex se tiene información del texto, por lo que el width debe ser calculado respecto al tamaño de la tabla*/
+.container-informacion .info_basica .info {
+    width: calc(100% - 450px);
+}
+
+
+/*Definir las propiedades de la tabla con información, en este caso se establece una altura para evitar que esta cambie con el contenedor*/
+.container-informacion .table_info {
+    height: 100%;
+}
+
+/*Establecer las propiedades de la imagen dentro de la tabla*/
+.container-informacion .table_info img {
+    /*Ancho de la imagen de 350px*/
+    width: 350px;
+}
+
+/*Definir estilo de borde de la tabla y de la fila*/
+.table_info,
+.table_info tr {
+    /*Ajustar su posición a relativa*/
+    position: relative;
+    /*Ajustar la propiedad de border-collapse para la visualización correcta*/
+    border-collapse: collapse;
+    /*Establecer el estilo de margen de la tabla*/
+    border: 1px solid rgb(179, 179, 179);
+}
+
+/*Establecer el color de fondo de la fila*/
+.table_info tr {
+    background-color: rgb(253, 253, 253);
+}
+
+/*Establecer el estilo del header de la tabla*/
+.table_info .title_header {
+    /*Color de fondo*/
+    background-color: rgb(226, 226, 226);
+    /*Tamaño fuente*/
+    font-size: 18px;
+    /*Texto en negrilla*/
+    font-weight: bold;
+    /*Texto alineado en el centro*/
+    text-align: center;
+}
+
+/*Establecer el estilo de la columna de la izquierda*/
+.table_info .column_title {
+    /*Tamaño de la fuente*/
+    font-size: 14px;
+    /*Texto en negrilla*/
+    font-weight: 600;
+    /*Padding left de 10px*/
+    padding-left: 10px;
+    /*Color de fondo de la columna y estilo de borde*/
+    background-color: rgb(247, 247, 247);
+    border-right: 1px dashed rgb(226, 226, 226);
+}
+
+/*Establecer el estilo de la columna de la derecha*/
+.table_info .column_info {
+    /*Tamaño de la fuente*/
+    font-size: 15px;
+    /*Padding izquierdo y derecho*/
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+
+/*
+/////////////////////////////
+Estilos página Ubicación
+/////////////////////////////
+*/
+
+/*Se establecen las propiedades del map*/
+.map {
+    margin: auto;
+    margin-top: 2%;
+}
+
+/*Se establece la margen de los contenedores con la información*/
+.container-informacion .geografia,
+.container-informacion .naciones {
+    margin: 20px 0px 50px 0px;
+}
+
+/*Se establece el tamaño de fuente del titulo*/
+.container-informacion .geografia .title,
+.container-informacion .naciones .title {
+    font-size: 35px;
+}
+
+/*Se establece el tamaño de la fuente del texto y se justifia*/
+.container-informacion .geografia .content,
+.container-informacion .naciones .content {
+    font-size: 20px;
+    text-align: justify;
+}
+
+/*Se coloca una margen izquierda al contenido de cada nacion*/
+.container-informacion .naciones .contenido_nacion {
+    margin: 0px 0px 0px 40px;
+}
+
+/*Se establecen las propiedades de cada una de las naciones*/
+.container-informacion .naciones .nacion {
+    /*Se define su posición relativa para enviar los datos a los hijos*/
+    position: relative;
+    /*Se utiliza un flex para aprovechar sus propiedades de organización*/
+    display: flex;
+    /*Se utiliza en modo WRAP para acomodar los contenedores*/
+    flex-wrap: wrap;
+    /*Se justifica con space-around*/
+    justify-content: space-around;
+    text-align: justify;
+    /*Se define el tamaño de fuente*/
+    font-size: 20px;
+}
+
+/*Se separa la imagen del texto con un margin-right y se dejan en la misma linea con la imagen*/
+.contenido_nacion .nacion p {
+    /*Se calcula el ancho del contenedor usando el tamaño del contenedor padre y el tamaño de la imagen*/
+    width: calc(100% - 480px);
+    margin-right: 80px;
+}
+
+/*Se definen las propiedades de la imagen*/
+.nacion .img_nacion {
+    /*Se define el ancho y alto de la imagen*/
+    width: 400px;
+    height: 280px;
+}
+
+/*
+/////////////////////////////
+Estilos página personajes
+/////////////////////////////
+*/
+
+/*Establecer el estilo de la imagen de  cada personaje*/
+.container-informacion .personajes img {
+    /*Se  define el Ancho y alto de la imagen*/
+    width: 300px;
+    height: 200px;
+}
+
+/*Se va a colocar un efecto de sobreposición sobre la imagen de cada personaje, por lo que se definen sus propiedades*/
+.container-informacion .personajes .effect {
+    /*Posición absoluta para evitar que esta afecté la imagen original*/
+    position: absolute;
+    /*No cambiar la relacion de aspecto*/
+    object-fit: cover;
+    /*Oculatr el div para que no opaque la imagen cuando no sea necesario*/
+    opacity: 0;
+}
+
+/*En caso de hacer hover se va a mostrar el efecto*/
+.container-informacion .personajes .effect:hover {
+    /*Definir una opacidad de 0.5 para su visualización*/
+    opacity: 0.5;
+}
+
+/*Se tienen dos tipos de contenedores, en este caso se definen las propiedades de cuando la imagen está a la izquierda*/
+.container-informacion .personajes .personaje-izq {
+    /*Se establece el display flex para la visualizacion*/
+    display: flex;
+    /*Se establece en modo wrap para su acomodación*/
+    flex-wrap: wrap;
+    /*Para usar distintas filas se establece su dirección en row*/
+    flex-direction: row;
+    /*Se centra el contenido respecto al contenedor padre*/
+    align-items: center;
+    align-content: space-around;
+}
+
+/*Se establecen las propiedades del título con el nombre del personaje*/
+.container-informacion .personajes .personaje-izq .subtitle {
+    /*Se deja en order -1 para que sea visto en la parte superior del flex*/
+    order: -1;
+    /*Se establece un ancho total respecto al contenedor padre*/
+    flex: 1 0 100%;
+    /*Se define el tamaño de fuente*/
+    font-size: 30px;
+}
+
+/*Se definen las propiedades para el texto que acompaña al personaje izquierdo*/
+.container-informacion .personajes .personaje-izq .text {
+    /*Para que se mantengan en la misma linea se calcula el width dependiendo del tamaño de la imagen*/
+    width: calc(100% - 400px);
+    /*Se justifica el texto*/
+    text-align: justify;
+    /*Se establece una margen izquierda*/
+    margin-left: 100px;
+}
+
+/*Se establecen las propiedades del contenedor para cuando la imagen está a la derecha */
+.container-informacion .personajes .personaje-der {
+    /*Se establece el display flex para la visualizacion*/
+    display: flex;
+    /*Se establece en modo wrap para su acomodación*/
+    flex-wrap: wrap;
+    /*Para que se vea de forma opuesta a la imagen a la izquierda, se establece dirección inversa*/
+    flex-direction: row-reverse;
+    /*Se centra el contenido respecto al contenedor padre*/
+    align-items: center;
+}
+
+/*Se establecen las propiedeades del texto con el nombre del personaje*/
+.container-informacion .personajes .personaje-der .subtitle {
+    /*Se acomoda en la parte superior del contenedor*/
+    order: -1;
+    /*Se establece un ancho total respecto al contenedor padre*/
+    flex: 1 0 100%;
+    /*Se define el tamaño de fuente*/
+    font-size: 30px;
+    /*Se alinea el texto a la derecha*/
+    text-align: end;
+}
+
+/*Se definen las propiedades para el texto que acompaña al personaje derecho*/
+.container-informacion .personajes .personaje-der .text {
+    /*Para que se mantengan en la misma linea se calcula el width dependiendo del tamaño de la imagen*/
+    width: calc(100% - 400px);
+    /*Se justifica el texto*/
+    text-align: justify;
+    /*Se establece una margen derecha de 100px*/
+    margin-right: 100px;
+}
+
+/*
+/////////////////////////////
+Estilos página actividades
+/////////////////////////////
+*/
+
+/*Definir las propiedades del contenedor de los distintos maestros*/
+.maestros {
+    /*Se establece la posición relativa*/
+    position: relative;
+    /*Un ancho del 90% respecto al padre*/
+    width: 90%;
+    /*Margen automática*/
+    margin: auto;
+    /*Se utilza un flex para mayor facilidad en la acomodación de los contenedores hijos*/
+    display: flex;
+    /*Se establece como WRAP para mantener los contenedores en la misma linea*/
+    flex-wrap: wrap;
+    /*Se centra el texto*/
+    text-align: center;
+    /*Se utiliza el justify content para centrar los contenedores*/
+    justify-content: center;
+}
+
+/*Estilo de las tarjeras de información*/
+.maestros .maestro {
+    position: relative;
+    /*Eliminar la decoración de los textos de la tarjeta*/
+    text-decoration: none;
+    /*Aplicar sombra sobre la tarjeta*/
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /*Definir un borde redondeado*/
+    border-radius: 2%;
+    /*Establecer margenes de separación*/
+    margin: 0px 1.5% 60px 1.5%;
+    width: 200px;
+    height: 200px;
+
+
+}
+
+/*Definir el tamaño de la imagen*/
+.maestros .maestro img {
+    /*Mantener la relación de aspecto de la imagen original*/
+    object-fit: cover;
+    /*Definir el ancho y alto de la imagen*/
+    width: 100%;
+    height: 100%;
+}
+
+/*Definir las propiedades al hacer hover sobre la tarjeta*/
+.maestros .maestro:hover {
+    /*Cambiar el ancho de la tarjeta*/
+    width: 205px;
+    /*Aplicar sombra*/
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 15px 25px;
+}
+
+/*De forma similar a los personajes, se tienen dos tipos de contenedores para los maestros (IZQ - DER)*/
+.container-informacion .info_maestro .maestro-izq {
+    /*Se establece la tarjeta como un flex para facilitar la acomodación*/
+    display: flex;
+    /*Se define en modo WRAP para mantenerlos en la misma linea si cumplen con un ancho*/
+    flex-wrap: wrap;
+    /*Para tener distintas filas se utiliza en modo row*/
+    flex-direction: row;
+    /*Se centran los elementos*/
+    align-items: center;
+    align-content: space-around;
+}
+
+/*Se utilizan casi las mismas propiedades para el contenedor maestro_der*/
+.container-informacion .info_maestro .maestro-der {
+    /*Se establece la tarjeta como un flex para facilitar la acomodación*/
+    display: flex;
+    /*Se define en modo WRAP para mantenerlos en la misma linea si cumplen con un ancho*/
+    flex-wrap: wrap;
+    /*Para tener distintas filas se utiliza en modo row pero en este caso INVERSO, de modo que se acomode en sentido contrario*/
+    flex-direction: row-reverse;
+    /*Se centran los elementos*/
+    align-items: center;
+    align-content: space-around;
+}
+
+/*Se establecen las propiedades de la imagen del maestro*/
+.container-informacion .info_maestro img {
+    /*Se mantiene  la relación de aspecto*/
+    object-fit: cover;
+    /*Se define el ancho y alto de la imagen*/
+    width: 400px;
+    height: 250px;
+}
+
+/*Se definen las propieades del texto de cada maestro*/
+.container-informacion .info_maestro .text {
+    font-size: 20px;
+}
+
+/*Se definen las propiedades del subtitulo de cada maestro*/
+.container-informacion .info_maestro .maestro-izq .subtitle,
+.container-informacion .info_maestro .maestro-der .subtitle {
+    /*Se define order -1 para que funcione como header del flex*/
+    order: -1;
+    /*Se define un ancho del 100%*/
+    flex: 1 0 100%;
+    /*Se establece el tamaño de fuente*/
+    font-size: 30px;
+    /*Se centra  el texto*/
+    text-align: center;
+}
+
+/*Establecer las propiedades del texto del maestro a la izquierda*/
+.container-informacion .info_maestro .maestro-izq .text {
+    /*Para que se mantenga en la misma linea que la imagen, se calcula el ancho dependiendo del ancho de la imagen*/
+    width: calc(100% - 400px - 10%);
+    /*Se justifica el texto*/
+    text-align: justify;
+    /*Se añade un margen izquierdo*/
+    margin-left: 10%;
+}
+
+/*Establecer las propiedades del texto del maestro a la derecha*/
+.container-informacion .info_maestro .maestro-der .text {
+    /*Para que se mantenga en la misma linea que la imagen, se calcula el ancho dependiendo del ancho de la imagen*/
+    width: calc(100% - 400px - 10%);
+    /*Se justifica el texto*/
+    text-align: justify;
+    /*Se añade un margen derecho del 10%*/
+    margin-right: 10%;
+}
+
+/*
+/////////////////////////////
+Estilos página Historia
+/////////////////////////////
+*/
+
+/*Se define el estilo del texto para la historia*/
+.container-informacion .historia .texto_historia {
+    /*Se define el tamaño de letra*/
+    font-size: 20px;
+    /*Se justifica el texto*/
+    text-align: justify;
+}
+
+/*Se definir el estilo de la imagen del leon torguga*/
+.container-informacion .historia .leon_tortuga {
+    /*Se establece un ancho y un alto*/
+    width: 600px;
+    height: 350px;
+    /*Se centra la imagen usando display block*/
+    display: block;
+    margin: auto;
+}
+
+/*Definir el estilo de la imagen de la guerra de los cien años*/
+.container-informacion .historia .guerra_cien {
+    /*Se establece un ancho y un alto*/
+    width: 450px;
+    height: 300px;
+    /*Se centra la imagen usando display block*/
+    display: block;
+    margin: auto;
+}
+
+/*Definir el estilo de la imagen de Aang en modo Avatar*/
+.container-informacion .historia .avatar_ozai {
+    /*Se establece un ancho y un alto*/
+    width: 700px;
+    height: 400px;
+    /*Se centra la imagen usando display block*/
+    display: block;
+    margin: auto;
+}
+
+/*
+/////////////////////////////
+Estilos página Creditos
+/////////////////////////////
+*/
+
+.container-informacion .explicacion {
+    font-size: 18px;
+    text-align: justify;
+}
+
+/*Esta página utiliza los estilos generales mostrados al principio, por lo que solo se debe ajustar al mapa de navegación*/
+.container-informacion .creditos .mapa_navegacion {
+    /*Se define un ancho del 90% del contenedor padre*/
+    width: 90%;
+    /*Se ajuta automáticamente la altura de la imagen*/
+    height: auto;
+    /*Se centra usando display block*/
+    display: block;
+    margin: auto;
+}
+
+/*
+-----------------------------
+/////////////////////////////
+Responsive Web Design (Media Queries)
+/////////////////////////////
+-----------------------------
+*/
+
+
+/*
+-----------------------------
+Cuando la ventana mida menos de 1366px
+-----------------------------
+*/
+@media only screen and (max-width: 1366px) {
+
+    /*Definir las propiedades del contenedor de los distintos accesos*/
+    /*Establecer las propiedades de cada uno de los botones*/
+    nav .buttons a {
+        padding: 30px 20px;
+        /*Definir la fuente*/
+        font-size: 15px;
+    }
+
+    /*Establecer las Propiedades del texto en la tarjeta de accesis*/
+    .accesos .temas p {
+        /*Reducir el font-weight a 500 y el font-size*/
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    /*Aumentar el tamaño del contenedor de información al 80%*/
+    .container-informacion {
+        width: 80%;
+    }
+
+    /*Para el texto de cada nación se definen las nuevas propiedades*/
+    .contenido_nacion .nacion p {
+        /*Se define un ancho del 100% para que no quede en la misma linea que la imagen*/
+        width: 100%;
+        /*Se separan el texto y la imagen con un margin bottom y se eliminan las demas margenes*/
+        margin: 0 0 20px 0;
+    }
+
+    /*Se cambian las propiedades de las tarjetas de cada maestro, reduciendo el margin left y right*/
+    .maestros .maestro {
+        /*Se reduce el margin a 1.5%*/
+        margin: 0px 0.8% 60px 0.8%;
+    }
+
+    /*Debido a que cambia el estilo en que se presenta cada maestro, se cambia el tamaño de las imagenes*/
+    .maestros .maestro {
+        width: 150px;
+        height: 150px;
+    }
+
+    /*Como los tamaños de las imagenes cambiaron, es necesario modificar las propiedades al hacer hover*/
+    .maestros .maestro:hover {
+        /*Se establece el nuevo ancho y alto*/
+        width: 162px;
+        height: 162px;
+    }
+}
+
+/*
+-----------------------------
+Cuando la ventana mida menos de 960px
+-----------------------------
+*/
+@media only screen and (max-width: 960px) {
+
+    /*Al ser tamaño más pequeño se modifica la barra de navegación para una correcta visualización*/
+    nav {
+        /*Se aumenta el ancho de la barra de navegación a 140px*/
+        height: 140px;
+    }
+
+    /*Se cambian las propiedades del contenedor del logo*/
+    nav .container-logo {
+        /*Eliminar la propiedad float*/
+        float: none;
+        /*Centrar el contenedor horizontalmente utilizando un flex*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*Establecer las nuevas propiedades de la imagen*/
+    nav .container-logo img {
+        /*Cambiar el tamaño del logo a un height de 70px*/
+        height: 70px;
+    }
+
+    /*Cambiar las propiedades de los botones de navegación*/
+    nav .buttons {
+        /*Eliminar la propiedad de float*/
+        float: none;
+        /*Añadir una margin superior de 5px*/
+        margin-top: 5px;
+        /*Centrar el contenedor horizontalmente utilizando flex*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*Establecer una altura de 50px para los botones*/
+        height: 50px;
+    }
+
+    /*Para cada botón definir el padding*/
+    nav .buttons a {
+        /*Establecer el nuevo padding de los botones*/
+        padding: 15px 20px;
+
+    }
+
+    /*Definir las propiedades el footer*/
+    footer {
+        /*Cambiar el font-weight a uno menor*/
+        font-weight: 500;
+        /* Quitar el padding para el footer*/
+        padding: 0px 0px;
+        /*Se centra el texto al centro*/
+        text-align: center;
+    }
+
+    /*Es necesario modificar las propiedades del texto del footer*/
+    footer p {
+        /*Para el texto del footer se utiliza un flex y se centra*/
+        display: flex;
+        justify-content: center;
+    }
+
+    /*Se establecen las propiedades del logo de github*/
+    footer .logo {
+        /*Se cambia el margin a 20px en la parte superior*/
+        margin-top: 20px;
+    }
+
+    /*Definir las propiedades del contenedor de los distintos accesos*/
+    .accesos {
+        /*El ancho del contenedor es del 100% con pantallas más pequeñas*/
+        width: 100%;
+    }
+
+    /*Con resoluciones más pequeñas se busca que la tabla aparezca primero, por lo que se establece WRAP-REVERSE*/
+    .container-informacion .info_basica .top_info {
+        /*Se ajusta en modo WRAP-REVERSE para mayor facilidad en el RWD*/
+        flex-wrap: wrap-reverse;
+
+    }
+
+    /*Propiedades del texto en la tarjeta*/
+    .accesos .temas p {
+        /*Reducir el font-weight a 600 y el font-size a 15px*/
+        font-weight: 600;
+        font-size: 15px;
+    }
+
+    /*El contenedor con la información básica se aumenta al 90% para una mejor visualización*/
+    .container-informacion .info_basica .info {
+        width: 90%;
+    }
+
+    /*Se cambia el margin del texto de la sinopsis*/
+    .container-informacion .info_basica .sinopsis .text {
+        margin: 0px 5%;
+    }
+
+    /*Es necesario realizar modificaciones a la página de personajes*/
+    /*Se cambian las propiedades de la imagen del personaje*/
+    .container-informacion .personajes .img_personaje {
+        /*Ahora el contenedor ocupa el 100% del ancho*/
+        width: 100%;
+        /*Se alinea el texto al centro*/
+        text-align: center;
+        /*Se eliminan las margenes anteriores*/
+        margin: 0;
+    }
+
+    /*Se centra el título de cada personaje*/
+    .container-informacion .personajes .personaje-izq .subtitle,
+    .container-informacion .personajes .personaje-der .subtitle {
+        text-align: center;
+    }
+
+    /*El texto con información de cada personaje ahora ocupa el 100% del ancho del contenedor padre*/
+    .container-informacion .personajes .personaje-izq .text,
+    .container-informacion .personajes .personaje-der .text {
+        /*Se establece el display flex para la visualizacion*/
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    /*Las imagenes de los maestros se debe modificar igualmente*/
+    .container-informacion .info_maestro img {
+        /*Se centra horizontalmente con display block*/
+        display: block;
+        /*Se cambian las margenes de la imagen*/
+        margin: 20px auto;
+        /*Se mantiene la relación de aspecto y se cambia el tamaño*/
+        width: 75%;
+        height: auto;
+    }
+
+    /*El texto que acompaña al maestro ahora ocupa el 100% del width del contenedor padre*/
+    .container-informacion .info_maestro .maestro-izq .text,
+    .container-informacion .info_maestro .maestro-der .text {
+        width: 100%;
+        /*Se eliminan las margenes anteriores*/
+        margin: 0;
+    }
+
+    /*Definir el nuevo estilo de cada una de las imagenes de historia*/
+    .container-informacion .historia .leon_tortuga,
+    .container-informacion .historia .guerra_cien,
+    .container-informacion .historia .avatar_ozai {
+        width: 90%;
+        height: auto;
+    }
+}
+
+/*
+-----------------------------
+Cuando la ventana mida menos de 720px
+-----------------------------
+*/
+@media only screen and (max-width: 720px) {
+
+    /*Cuando la ventana es inferior a 720px se usa un nuevo menu de navegación*/
+    nav {
+        /*Se cambia la propiedad de overflow para que se vea el menu desplegable*/
+        overflow: visible;
+        /*Se ajusta la nueva altura*/
+        height: 66px;
+    }
+
+    /*Se vuelve a ajustar el contenedor del logo a la izquierda*/
+    nav .container-logo {
+        /*Ubicar el contenedor del logo a la izquierda*/
+        float: left;
+    }
+
+    /*Se cambia la altura de la imagen a 50px*/
+    nav .container-logo img {
+        /*Cambiar el tamaño del logo*/
+        height: 50px;
+    }
+
+    /*Se cambia el estilo de los botones completamente*/
+    nav .buttons {
+        /*Para que al aparecer el menú no afecte la página, se establece la posición absoluta*/
+        position: absolute;
+        /*Se ubica en la parte inferior del menu de navegación*/
+        top: 100%;
+        /*Se eliminan todas las margenes anterioress*/
+        margin: 0;
+        /*Se establece un ancho del 100% para el menu*/
+        width: 100%;
+        /*Se define la altura del contenedor*/
+        height: max-content;
+        /*Para mayor facilidad de modificación, se utiliza un flex para cada botón*/
+        display: flex;
+        /*Se establece en dirección columna*/
+        flex-direction: column;
+        /*Se cambian los distintos colores del menu*/
+        background-color: rgb(38, 38, 38);
+        border-top: 1px solid rgba(255, 255, 255, 0.8);
+        border-bottom: 1px solid rgba(119, 119, 119, 0.8);
+        /*Se ubica por encima de los demas contenedores para su correcto uso*/
+        z-index: 3;
+        /*Se mantiene oculto a menos que sea llamados*/
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /*Se establecen las propiedades de cada botón*/
+    nav .buttons a {
+        /*Se cambia el color de fondo*/
+        background-color: rgb(38, 38, 38);
+        /*Se alinea el texto en el centro*/
+        text-align: center;
+        /*Se añade el padding de cada botón*/
+        padding: 15px 0px 15px 0px;
+        /*Cada botón ocupa el 100% del ancho del contenedor padre*/
+        width: 100%;
+        /*Se establece el color y tamaño de fuente*/
+        font-size: 18px;
+        color: rgb(247, 247, 247);
+    }
+
+    /*Se definen las propiedades del efecto hover*/
+    nav .buttons a:hover {
+        /*Color de letra negra con fondo claro*/
+        background-color: rgb(197, 194, 194);
+        color: black;
+    }
+
+    /*En caso de ser la página actual se cambian las propiedades*/
+    nav .buttons .active {
+        /*Se cambia el color del texto a dorado*/
+        color: rgb(230, 213, 107);
+        /*Se aumenta el tamaño de la letra*/
+        font-size: 19px;
+        /*Se coloca en negrillas*/
+        font-weight: bold;
+    }
+
+    /*Se muestra el botón para mostrar el menu*/
+    nav .button_menu {
+        /*Se utiliza flex para el botón*/
+        display: flex;
+    }
+
+    /*En caso de estar seleccionado el label del menú modificar el contenedor de los botones*/
+    #btn-menu:checked~.buttons {
+        /*Mostrar el menu*/
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /*Cambiar la imagen que se muestra en el botón*/
+    #btn-menu:checked~* .button_menu .exit {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /*Ocultar la imagen original del menu*/
+    #btn-menu:checked~* .button_menu .menu {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+
+
+    /*Se cambian las propiedades del contenido de cada nación*/
+    .container-informacion .naciones .contenido_nacion {
+        /*Se eliminan las margenes anteriores para una mejor visualización*/
+        margin: 0px;
+    }
+
+    /*Se define el nuevo ancho  para la imagen de cada nacion*/
+    .nacion .img_nacion {
+        width: 80%;
+        height: auto;
+    }
+
+    /*Se cambia el ancho del contenedor de maestros a 75%*/
+    .maestros {
+        width: 75%;
+    }
+
+    /*Debido a que cambia el estilo en que se presenta cada maestro, se cambia el tamaño de las imagenes*/
+    .maestros .maestro {
+        width: 38%;
+        height: 38%;
+    }
+
+    /*Como los tamaños de las imagenes cambiaron, es necesario modificar las propiedades al hacer hover*/
+    .maestros .maestro:hover {
+        /*Se establece el nuevo ancho y alto*/
+        width: 39%;
+        height: 39%;
+    }
+
+    /*Se establecen nuevas margenes para cada uno de los elementos*/
+    .maestros .maestro {
+        margin: 0px 5% 60px 5%;
+    }
+
+}
+
+/*
+-----------------------------
+Cuando la ventana mida menos de 600px
+-----------------------------
+*/
+@media only screen and (max-width: 600px) {
+
+    /*Cambiar el ancho del contenedor de información*/
+    .container-informacion {
+        width: 80%;
+    }
+
+    /*Cuando la resolución sea muy pequeña, los accesos se ocultan en un nuevo menu*/
+    /*Cuando la resolución es menor a 600px se muestra el botón de accesos*/
+    .accesos_container .button_accesos {
+        display: flex;
+    }
+
+    /*Se establecen las propiedades del botón al hacer hover*/
+    .accesos_container .button_accesos:hover {
+        background-color: rgb(230, 209, 76);
+    }
+
+    /*Además el botón cambia cuando ocurre hover, cambiando de una imagen estática a una animada*/
+    .accesos_container .button_accesos:hover>.animated {
+        /*Se muestra la imagen animada*/
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .accesos_container .button_accesos:hover>.static {
+        /*Se oculta la imagen estática*/
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /*Se cambia la forma en que se presentan los diferentes accesos*/
+    .accesos {
+        /*Para evitar que afecte el contenido de la página se cambia a posición absoluta*/
+        position: absolute;
+        /*Se centra horizontalmente utilizando la propiedad transform y translate*/
+        left: 50%;
+        transform: translate(-50%, 0);
+        /*Se oulta el menu*/
+        visibility: hidden;
+        /*Se establece un nuevo color para el menu*/
+        background-color: rgb(231, 216, 117);
+        /*Se establece un ancho del 95% respecto al contenedor padre*/
+        width: 95%;
+        /*Se deja en una posicion intermedia entre el menu de navegación y el contenido de la página*/
+        z-index: 2;
+        /*Se establece un box shadow para el contenedor*/
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+
+    /*Se modifica el estilo de las tarjeras de información*/
+    .accesos .temas {
+        /*Establecer margenes de separación*/
+        margin: 10px 0;
+        /*Se cambia el tamaño de la tarjeta a un 80% del tamaño del padre*/
+        width: 80%;
+        /*Se establece un padding superior del 28%*/
+        padding-top: 28%;
+    }
+
+    /*Cambio de tamaño al hover*/
+    .accesos .temas:hover {
+        /*El tamaño aumenta a 80.5%*/
+        width: 80.5%;
+    }
+
+    /*Cambiar las Propiedades del texto en la tarjeta*/
+    .accesos .temas p {
+        font-size: 18px;
+    }
+
+    /*Mostrar el menu en caso de seleccionar el label de accesos*/
+    #btn-accesos:checked~*.accesos {
+        visibility: visible;
+    }
+}
